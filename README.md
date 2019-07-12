@@ -17,9 +17,3 @@ Requirements:
 * SFX- explosion, turret and barrel moving, tank engine, tank moving on terrain, initial shot sound, select sounds in UI, starting/ending game sounds
 * Art- tank assets, terrain assets, UI design
 * Music- background music to increase intensity, menu and pause music
-
-## Lecture List
-* Intro, Notes, and Section 4 Assets
-* Battle Tank Overview
-* Section 4 Game Design Document (GDD)
-* Setting Up a GitHub Repo
