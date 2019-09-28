@@ -31,3 +31,8 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+void ATank::AimAt(FVector HitLocation)
+{
+	auto OurTankName = GetName();
+	UE_LOG(LogTemp, Warning, TEXT("%s aiming at %s."), *OurTankName, *HitLocation.ToString()) // . instead of -> or * because HitLocation() is a variable/member, not pointer. .ToString is just like converting a string into an integer through integer parsing in Java, but the opposite.
+}

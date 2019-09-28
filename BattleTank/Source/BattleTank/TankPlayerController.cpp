@@ -38,8 +38,7 @@ void ATankPlayerController::AimTowardsCrosshair()
 	FVector HitLocation; // Out parameter
 	if (GetSightRayHitLocation(HitLocation)) // Has "side-effect", is going to line trace
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Hit Location: %s."), *HitLocation.ToString()) // . instead of -> or * because HitLocation() is a variable/member, not pointer
-		// TODO Tell controlled tank to aim at this point
+		GetControlledTank()->AimAt(HitLocation); // Parse from Tank to TankPlayerController. Aiming at whatever the crosshair is pointing at, so "HitLocation"
 	}
 }
 
