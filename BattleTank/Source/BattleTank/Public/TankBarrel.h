@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/StaticMeshComponent.h"
+#include "Components/StaticMeshComponent.h" // Necessary because this class inherits from StaticMeshComponent
 #include "TankBarrel.generated.h"
 
 /**
  * 
  */
 UCLASS(meta = (BlueprintSpawnableComponent))
-class BATTLETANK_API UTankBarrel : public UStaticMeshComponent
+class BATTLETANK_API UTankBarrel : public UStaticMeshComponent // TankBarrel class inheriting from StaticMeshComponent
 {
 	GENERATED_BODY()
 	

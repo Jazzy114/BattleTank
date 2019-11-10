@@ -1,6 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#include "TankAimingComponent.h"
 #include "Tank.h"
 
 void ATank::SetBarrelReference(UTankBarrel* BarrelToSet)
