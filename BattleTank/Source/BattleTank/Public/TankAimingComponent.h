@@ -10,9 +10,10 @@
 
 // Forward Declaration. Removes chain dependency from #include.
 class UTankBarrel;
+class UTurret;
 
 // Holds barrel's properties and Elevate method
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class BATTLETANK_API UTankAimingComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -23,7 +24,7 @@ public:
 
 	void SetBarrelReference(UTankBarrel* BarrelToSet);
 
-	// TODO add SetTurretReference
+	void SetTurretReference(UTurret* TurretToSet);
 
 	void AimAt(FVector HitLocation, float LaunchSpeed);
 		
@@ -31,4 +32,6 @@ private:
 	UTankBarrel* Barrel = nullptr;
 
 	void MoveBarrelTowards(FVector AimDirection);
+
+	UTurret* Turret = nullptr;
 };
