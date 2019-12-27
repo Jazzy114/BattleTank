@@ -4,6 +4,7 @@
 #include "Projectile.h"
 #include "TankBarrel.h"
 #include "TankAimingComponent.h"
+#include "TankMovementComponent.h"
 
 
 void ATank::SetBarrelReference(UTankBarrel* BarrelToSet)
@@ -24,7 +25,8 @@ ATank::ATank()
 	PrimaryActorTick.bCanEverTick = false;
 
 	// No need to protect pointers as added at construction
-	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName ("Aiming Component"));
+	TankAimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));
+	TankMovementComponent = CreateDefaultSubobject<UTankMovementComponent>(FName("Movement Component"));
 }
 
 // Called when the game starts or when spawned
@@ -37,7 +39,6 @@ void ATank::BeginPlay()
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
 
 void ATank::AimAt(FVector HitLocation)
