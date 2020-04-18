@@ -15,6 +15,7 @@ ATank::ATank()
 
 void ATank::AimAt(FVector HitLocation)
 {
+	if (!TankAimingComponent) { return; } // Pointer protection
 	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
 }
 

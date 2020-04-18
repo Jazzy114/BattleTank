@@ -48,4 +48,6 @@ private:
 	UTankBarrel* Barrel = nullptr; // TODO Remove
 
 	double LastFireTime = 0; // Double is default 
+
+
 };
