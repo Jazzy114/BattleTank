@@ -1,4 +1,4 @@
-// Copyright EmbraceIT Ltd.
+// Copyright Fizz Co.
 
 #pragma once
 

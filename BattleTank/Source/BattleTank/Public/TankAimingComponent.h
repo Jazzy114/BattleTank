@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright Fizz Co.
 
 #pragma once
 
@@ -29,12 +29,9 @@ class BATTLETANK_API UTankAimingComponent : public UActorComponent
 
 
 public:	
-	// Sets default values for this component's properties
-	UTankAimingComponent();
-
-	void SetBarrelReference(UTankBarrel* BarrelToSet);
-	void SetTurretReference(UTurret* TurretToSet);
-
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+	
+	void Initialize(UTankBarrel* BarrelToSet, UTurret* TurretToSet);
 	void AimAt(FVector HitLocation, float LaunchSpeed);
 
 protected:
@@ -42,6 +39,9 @@ protected:
 	EFiringState FiringState = EFiringState::Aiming;
 
 private:
+	// Sets default values for this component's properties
+	UTankAimingComponent();
+
 	UTankBarrel* Barrel = nullptr;
 	UTurret* Turret = nullptr;
 

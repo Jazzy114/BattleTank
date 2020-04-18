@@ -1,4 +1,4 @@
-// Copyright EmbraceIT Ltd.
+// Copyright Fizz Co.
 
 
 #include "TankMovementComponent.h"
@@ -7,7 +7,6 @@
 void UTankMovementComponent::Initialize(UTankTrack* LeftTrackToSet, UTankTrack* RightTrackToSet) {
 	LeftTrack = LeftTrackToSet;
 	RightTrack = RightTrackToSet;
-
 }
 
 void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool bForceMaxSpeed) {
